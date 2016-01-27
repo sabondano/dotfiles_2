@@ -4,6 +4,7 @@ let mapleader = " "
 set nocompatible
 filetype off
 
+" load all plugins in ~/.vimrc.bundles
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
@@ -66,3 +67,21 @@ map <Leader>i mmgg=G`m
 
 " Copy the entire buffer into the system register
 nmap <leader>co ggVG*y
+
+" automatically rebalance windows on vim resize
+autocmd VimResized * :wincmd =
+
+" zoom a vim pane, <C-w>= to re-balance
+nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
+nnoremap <leader>= :wincmd =<cr>
+
+" Determine proper commmand to run the current spec or spec file, and then
+" hand off to Vim Tmux Runner
+" let g:rspec_runner = "call VtrSendCommand('rspec {spec}')"
+let g:rspec_command = "VtrSendCommandToRunner! rspec {spec}"
+
+" RSpec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
