@@ -98,3 +98,11 @@ map <Leader>a :call RunAllSpecs()<CR>
 
 " Set airline Theme
 let g:airline_themes='solarize'
+
+" Syntax highliting
+augroup syntaxHighlighting
+  autocmd BufRead,BufNewFile *.js.slim set filetype=javascript
+  autocmd BufRead,BufNewFile *.js.erb set filetype=javascript
+  autocmd BufRead,BufNewFile *.slimbars set filetype=slim
+  autocmd BufRead,BufNewFile *.md set filetype=markdown
+augroup END
