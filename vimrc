@@ -106,3 +106,6 @@ augroup syntaxHighlighting
   autocmd BufRead,BufNewFile *.slimbars set filetype=slim
   autocmd BufRead,BufNewFile *.md set filetype=markdown
 augroup END
+
+" Explore mapping
+map <Leader>e :Explore<CR>
