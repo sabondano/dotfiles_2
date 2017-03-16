@@ -96,8 +96,18 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
-" Set airline Theme
+" airline config
 let g:airline_themes='solarize'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#show_splits = 0
+let g:airline#extensions#tabline#show_tabs = 1
+let g:airline#extensions#tabline#show_tab_nr = 0
+let g:airline#extensions#tabline#show_tab_type = 0
+let g:airline#extensions#tabline#close_symbol = '×'
+let g:airline#extensions#tabline#show_close_button = 0
+
 
 " Syntax highliting
 augroup syntaxHighlighting
@@ -109,3 +119,28 @@ augroup END
 
 " Explore mapping
 map <Leader>e :Explore<CR>
+
+"""""""""""""""""""""
+" vim-test extensions
+" from:
+" https://github.com/wojtekmach/dotfiles/blob/92f8607b76bb17ff5b138410a21d3ebedf0b2d37/vim/.vimrc#L131:L144
+" but with some modifications.
+" """""""""""""""""""""
+function! ElixirUmbrellaTransform(cmd) abort
+  if match(a:cmd, 'apps/') != -1
+    return substitute(a:cmd, 'mix test apps/\([^/]*/\)', 'mix test ', '')
+  else
+    return a:cmd
+  end
+endfunction
+
+let g:test#preserve_screen = 0
+let g:test#custom_transformations = {'elixir_umbrella': function('ElixirUmbrellaTransform')}
+let g:test#transformation = 'elixir_umbrella'
+let test#strategy = 'vimux'
+
+map <Leader>n :TestNearest<CR>
+map <Leader>f :TestFile<CR>
+""""""""""""""""""""""
+" /vim-test extensions
+" """"""""""""""""""""

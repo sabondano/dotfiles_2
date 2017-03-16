@@ -46,3 +46,7 @@ alias upcase="cd ~/dropbox/sebastian/studies/upcase/"
 alias practice="cd ~/Dropbox/Sebastian/Studies/practice"
 alias terakeet="cd ~/Dropbox/sebastian/terakeet"
 alias dotfiles="cd ~/Dropbox/Sebastian/dotfiles"
+
+#asdf (for elixir version management)
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
