@@ -91,10 +91,10 @@ nnoremap <leader>= :wincmd =<cr>
 let g:rspec_command = "VtrSendCommandToRunner! rspec {spec}"
 
 " RSpec.vim mappings
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
+" map <Leader>t :call RunCurrentSpecFile()<CR>
+" map <Leader>s :call RunNearestSpec()<CR>
+" map <Leader>l :call RunLastSpec()<CR>
+" map <Leader>a :call RunAllSpecs()<CR>
 
 " airline config
 let g:airline_themes='solarize'
@@ -141,6 +141,7 @@ let test#strategy = 'vimux'
 
 map <Leader>n :TestNearest<CR>
 map <Leader>f :TestFile<CR>
+map <Leader>l :TestLast<CR>
 """"""""""""""""""""""
 " /vim-test extensions
 " """"""""""""""""""""
