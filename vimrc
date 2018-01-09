@@ -145,3 +145,7 @@ map <Leader>l :TestLast<CR>
 """"""""""""""""""""""
 " /vim-test extensions
 " """"""""""""""""""""
+
+" syntastic config
+" let g:syntastic_javascript_checkers = ['jshint'] # commented out because of
+" this error: https://github.com/phoenixframework/phoenix/issues/1165

@@ -48,5 +48,5 @@ alias terakeet="cd ~/Dropbox/sebastian/terakeet"
 alias dotfiles="cd ~/Dropbox/Sebastian/dotfiles"
 
 #asdf (for elixir version management)
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
+# . $HOME/.asdf/asdf.sh
+# . $HOME/.asdf/completions/asdf.bash
