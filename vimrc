@@ -149,3 +149,6 @@ map <Leader>l :TestLast<CR>
 " syntastic config
 " let g:syntastic_javascript_checkers = ['jshint'] # commented out because of
 " this error: https://github.com/phoenixframework/phoenix/issues/1165
+
+" Fixes backspace/delete issues
+set backspace=indent,eol,start

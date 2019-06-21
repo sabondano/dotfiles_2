@@ -50,3 +50,11 @@ alias dotfiles="cd ~/Dropbox/Sebastian/dotfiles"
 #asdf (for elixir version management)
 # . $HOME/.asdf/asdf.sh
 # . $HOME/.asdf/completions/asdf.bash
+
+# added by Miniconda3 installer
+export PATH="/Users/sebastianabondano/miniconda3/bin:$PATH"
+
+# Enable history in IEx
+export ERL_AFLAGS="-kernel shell_history enabled"
+# Let IEx know what editor to use
+export ELIXIR_EDITOR="tmux split-window -t 0 'vi +__LINE__ __FILE__'"
