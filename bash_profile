@@ -47,14 +47,13 @@ alias practice="cd ~/Dropbox/Sebastian/Studies/practice"
 alias terakeet="cd ~/Dropbox/sebastian/terakeet"
 alias dotfiles="cd ~/Dropbox/Sebastian/dotfiles"
 
-#asdf (for elixir version management)
-# . $HOME/.asdf/asdf.sh
-# . $HOME/.asdf/completions/asdf.bash
-
-# added by Miniconda3 installer
-export PATH="/Users/sebastianabondano/miniconda3/bin:$PATH"
-
 # Enable history in IEx
 export ERL_AFLAGS="-kernel shell_history enabled"
 # Let IEx know what editor to use
 export ELIXIR_EDITOR="tmux split-window -t 0 'vi +__LINE__ __FILE__'"
+
+# asdf (https://asdf-vm.com/#/core-manage-asdf-vm)
+. /usr/local/opt/asdf/asdf.sh
+. /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
+
+export PATH="$HOME/.poetry/bin:$PATH"

@@ -152,3 +152,8 @@ map <Leader>l :TestLast<CR>
 
 " Fixes backspace/delete issues
 set backspace=indent,eol,start
+
+" Enumerate filetypes you want to highlight in code block in markdown.
+" " Please be careful because too many items in the list will make
+" highlighting markdown slow.
+let g:markdown_fenced_languages = ['sql']
